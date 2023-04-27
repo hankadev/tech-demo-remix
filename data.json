@@ -1,0 +1,14 @@
+{
+  "reminders": [
+    {
+      "id": "1",
+      "name": "empty mail box",
+      "description": "read and answer to all the mails in the mail box before the weekend"
+    },
+    {
+      "id": "2",
+      "name": "buy new shoes",
+      "description": "buy new running shoes so I can finally retire the old one :)"
+    }
+  ]
+}
