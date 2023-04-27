@@ -1,0 +1,71 @@
+.link-button, .link-button:link, .link-button:visited , .link-button:hover, .link-button:active{
+  background: var(--primaryLight);
+  color: var(--primaryDark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  align-self: flex-end;
+}
+
+.reminders {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.reminder-card {
+  background-color: var(--primaryLight);
+  color: var(--primaryDark);
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+}
+
+form {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+
+label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  border-radius: var(--radius);
+  background-color: var(--primaryLight);
+  color: var(--primaryDark);
+  padding: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+.create-button {
+  background-color: var(--primaryLight);
+  color: var(--primaryDark);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+  align-self: flex-end;
+  border: none;
+}
+
+.create-button:hover {
+  cursor: pointer;
+}
+
+.error-text{
+  font-size: 0.8rem;
+  color: var(--error);
+  margin: 0;
+  padding-left: 1rem;
+}

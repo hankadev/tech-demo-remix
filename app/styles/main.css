@@ -1,0 +1,54 @@
+:root {
+  --primaryDark: #2A2F4F;
+  --primaryLight: #E5BEEC;
+  --error: #F45050;
+  --radius: 1rem
+}
+
+body {
+  background-color: var(--primaryDark);
+    color: var(--primaryLight);
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a, a:hover, a:active, a:visited, a:link {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a{
+  color: var(--primaryLight);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  background-color: var(--primaryLight);
+  color: var(--primaryDark);
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+
+.error-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,14 @@
+{
+  "reminders": [
+    {
+      "id": "1",
+      "name": "buy coffee",
+      "description": "buy coffee for the office"
+    },
+    {
+      "id": "2",
+      "name": "write blog post",
+      "description": "finish blog post about GitHub Actions"
+    }
+  ]
+}
