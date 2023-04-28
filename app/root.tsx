@@ -1,5 +1,3 @@
-import type { V2_MetaFunction } from "@remix-run/react";
-import { isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import {
   Links,
   LiveReload,
@@ -8,81 +6,28 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from "~/styles/main.css";
-import MainNavigation from "./components/navigation";
 
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
-}
+// links to main css file
 
-export const meta: V2_MetaFunction = () => {
-  return [{ title: "Remember it!" }];
-};
+// meta tag for title
 
-function Document({
-  title,
-  children,
-}: {
-  title?: string;
-  children: JSX.Element;
-}) {
+export default function App() {
   return (
     <html lang="en">
       <head>
-        {title && <title>{title}</title>}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body>
-        <header>
-          <MainNavigation />
-        </header>
-        {children}
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
       </body>
     </html>
   );
 }
 
-export default function App() {
-  return (
-    <Document>
-      <>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </>
-    </Document>
-  );
-}
-
-export function ErrorBoundary() {
-  const error = useRouteError();
-
-  if (isRouteErrorResponse(error)) {
-    return (
-      <Document>
-        <div className="error-wrapper">
-          <h1>Oops</h1>
-          <p>Status: {error.status}</p>
-          <p>{error.data.message}</p>
-        </div>
-      </Document>
-    );
-  }
-
-  let errorMessage = "Unknown error";
-  if (error instanceof Error) {
-    errorMessage = error.message;
-  }
-
-  return (
-    <Document>
-      <div className="error-wrapper">
-        <h1>Uh oh ...</h1>
-        <p>Something went wrong.</p>
-        <pre>{errorMessage}</pre>
-      </div>
-    </Document>
-  );
-}
+// add ErrorBoundary
